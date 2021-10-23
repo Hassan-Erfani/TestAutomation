@@ -1,13 +1,18 @@
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 class CalculatorTest {
-
+    Calculator calculator;
+    @BeforeEach
+    void setUp(){
+        calculator = new Calculator();
+    }
     @Test
     void add() {
-        Calculator calculator = new Calculator();
+
         int a = 1;
         int b = 2;
         double result = calculator.add(a, b);
@@ -17,7 +22,7 @@ class CalculatorTest {
 
     @Test
     void subtract() {
-        Calculator calculator = new Calculator();
+
         int a = 5;
         int b = 3;
         //final double substract = calculator.subtract(a, b);
@@ -27,6 +32,8 @@ class CalculatorTest {
 
     @Test
     void multiply() {
+        Assertions.assertEquals(4, calculator.multiply(2, 2));
+        Assertions.assertEquals(6, calculator.multiply(2, 3));
     }
 
     @Test
