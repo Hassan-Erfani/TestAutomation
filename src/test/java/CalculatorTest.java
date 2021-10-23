@@ -12,22 +12,12 @@ class CalculatorTest {
     }
     @Test
     void add() {
-
-        int a = 1;
-        int b = 2;
-        double result = calculator.add(a, b);
-        Assertions.assertEquals(3, result);
-
+        Assertions.assertEquals(3, calculator.add(1, 2));
     }
 
     @Test
     void subtract() {
-
-        int a = 5;
-        int b = 3;
-        //final double substract = calculator.subtract(a, b);
-        //Assertions.assertEquals(2, substract);
-        Assertions.assertEquals(2, calculator.subtract(a, b));
+        Assertions.assertEquals(2, calculator.subtract(5, 3));
     }
 
     @Test
@@ -38,13 +28,16 @@ class CalculatorTest {
 
     @Test
     void divide() {
+        Assertions.assertEquals(2, calculator.divide(10, 5));
     }
 
     @Test
     void modulo() {
+        Assertions.assertEquals(4, calculator.modulo(9, 5));
     }
 
     @Test
     void sum() {
+        Assertions.assertEquals(7, calculator.sum( new double[]{3,4}));
     }
 }

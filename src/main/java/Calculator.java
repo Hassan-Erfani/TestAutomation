@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 /**
  * Calculator Class
  */
@@ -10,10 +12,9 @@ public class Calculator {
      * @return das Ergebnis der Addition
      */
     public double add(double a, double b) {
-        double result;
-        result = a + b;
+        double  result = a + b;
+        printResult(result);
         return result;
-        //return a + b;
     }
 
     /**
@@ -23,7 +24,9 @@ public class Calculator {
      * @return Das Ergebnis der Subtraktion
      */
     public double subtract(double a, double b) {
-        return a - b;
+        double  result = a - b;
+        printResult(result);
+        return result;
     }
 
     /**
@@ -33,7 +36,9 @@ public class Calculator {
      * @return Das Ergebnis der Multiplikation
      */
     public double multiply(double a, double b) {
-        return a * b;
+        double result = a * b;
+        printResult(result);
+        return result;
     }
 
     /**
@@ -45,7 +50,9 @@ public class Calculator {
     public double divide(double dividend, double divisor) {
         // führe die Berechnung nur aus, wenn der divisor ungleich 0 ist
         if (divisor != 0) {
-            return dividend / divisor;
+            double  result = dividend / divisor;
+            printResult(result);
+            return result;
         }
         // sonst liefere einfach 0 zurück
         return 0;
@@ -58,7 +65,9 @@ public class Calculator {
      * @return Den Restwert der Division
      */
     public double modulo(double a, double mod) {
-        return a % mod;
+        double result = a % mod;
+        printResult(result);
+        return result;
     }
 
     /**
@@ -69,8 +78,9 @@ public class Calculator {
     public double sum(double[] numberToSumUp) {
         double result = 0;
         for (double n : numberToSumUp) {
-            result = result + n;
+            result += n;
         }
+        printResult(result);
         return result;
     }
 
